@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"monokai"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null,"system":"disqus","disqus_shortname":"your-shortname"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="迂回的建模与失败的结果。">
+    <meta name="description" content="迂回的14个模型，迷茫的一周与失败的结果。 会赢吗？">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="PlanN 数据分析 log 11.17">
 <meta property="og:url" content="http://example.com/2025/11/17/%E7%A0%94%E7%A9%B6%E8%B7%AF%E5%BE%84/index.html">
 <meta property="og:site_name" content="水银废墟">
-<meta property="og:description" content="迂回的建模与失败的结果。">
+<meta property="og:description" content="迂回的14个模型，迷茫的一周与失败的结果。 会赢吗？">
 <meta property="og:locale">
 <meta property="article:published_time" content="2025-11-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-11-16T17:26:07.978Z">
+<meta property="article:modified_time" content="2025-11-16T17:51:54.211Z">
 <meta property="article:author" content="Adrian">
 <meta name="twitter:card" content="summary">
 
@@ -132,7 +132,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">研究过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81-%E8%BF%9E%E7%BB%AD%E5%8F%98%E9%87%8F%E8%B0%83%E8%8A%82%E6%A8%A1%E5%9E%8B%EF%BC%88-text-Model-1-text-Model-5-%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">一、 连续变量调节模型（$\text{Model 1}$ - $\text{Model 5}$）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81-%E8%81%9A%E7%B1%BB%E8%B0%83%E8%8A%82%E6%A8%A1%E5%9E%8B%EF%BC%88-text-Model-M9-%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">二、 聚类调节模型（$\text{Model M9}$）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81-%E5%86%85%E9%83%A8%E9%AA%8C%E8%AF%81%E6%A8%A1%E5%9E%8B%EF%BC%88-text-Model-M14-%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">三、 内部验证模型（$\text{Model M14}$）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">研究过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81-%E8%BF%9E%E7%BB%AD%E5%8F%98%E9%87%8F%E8%B0%83%E8%8A%82%E6%A8%A1%E5%9E%8B%EF%BC%88Model-1-Model-5%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">一、 连续变量调节模型（Model 1 - Model 5）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81-%E8%81%9A%E7%B1%BB%E8%B0%83%E8%8A%82%E6%A8%A1%E5%9E%8B%EF%BC%88Model-M9%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">二、 聚类调节模型（Model M9）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81-%E5%86%85%E9%83%A8%E9%AA%8C%E8%AF%81%E6%A8%A1%E5%9E%8B%EF%BC%88Model-M14%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">三、 内部验证模型（Model M14）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -190,7 +190,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="PlanN 数据分析 log 11.17 | 水银废墟">
-      <meta itemprop="description" content="迂回的建模与失败的结果。">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -206,7 +206,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-11-17 00:00:00 / Modified: 01:26:07" itemprop="dateCreated datePublished" datetime="2025-11-17T00:00:00+08:00">2025-11-17</time>
+      <time title="Created: 2025-11-17 00:00:00 / Modified: 01:51:54" itemprop="dateCreated datePublished" datetime="2025-11-17T00:00:00+08:00">2025-11-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -225,37 +225,35 @@
   
 </div>
 
-            <div class="post-description">迂回的建模与失败的结果。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>用一周时间建了 14 个模型，那么结果是什么呢？会赢吗。</p>
+    <div class="post-body" itemprop="articleBody"><p>迂回的14个模型，迷茫的一周与失败的结果。</p>
+<p>会赢吗？</p>
 <span id="more"></span>
 
 
-<p>通过从连续变量到聚类分组的复杂调节模型分析，希望确定<strong>认知灵活性 ($\text{CF}$) 的保护性效应</strong>如何受到<strong>行为抑制性 ($\text{BI}$) 水平</strong>的调节。将整个 M1-M14 模型建模过程总结如下：</p>
-<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>为确定行为抑制性 ($\text{BI}$) 对内化问题（<em>IN</em>）的作用如何受到认知灵活性 () 的调节，进行了如下探索：</p>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>为确定行为抑制性 (BI) 对内化问题（IN）的作用如何受到认知灵活性 (CF) 的调节，进行了如下探索：</p>
 <ul>
-<li>针对数据分布偏态：<br>采用 $\text{Cox}$ 生存模型残差构建了 $\text{BI}$ 连续分数 ($\text{BI_score_new_rev}$)</li>
-<li>针对多量表整合出现的数据缺失：<br>利用 $\text{MICE}$ 多重插补处理缺失数据。</li>
+<li>针对数据分布偏态：采用 <strong>Cox 生存模型残差</strong>构建了 BI 连续分数 (BI_score_new_rev)</li>
+<li>针对多量表整合出现的数据缺失：利用 MICE 多重插补处理缺失数据。</li>
 </ul>
-<p><strong>研究流程</strong>：<br>从全样本的连续变量调节模型 ($\text{M1}$-$\text{M5}$) 开始，发现 $\text{CF} \times \text{BI}$ 交互项虽方向一致但效应微弱且不显著。随后转向基于 $\text{BI}$ 聚类分组 ($\text{M9}$) 的简单斜率分析，发现 $\text{CF}$ 的保护作用仅在<strong>中度BI组</strong>中边缘显著 ($\text{Estimate} &#x3D; -0.0220, p&#x3D;0.0543$)，但在<strong>高BI组</strong>中效应完全消失 ($\text{Estimate} \approx 0.0014$)。</p>
-<p><strong>探究效应消失原因</strong>：<br>进一步构建了针对<strong>高 $\text{BI}$ 亚组</strong>的内部验证模型 ($\text{M14}$)。结果显示，在该子样本中，连续 $\text{BI}$ 分数与 $\text{CF}$ 的交互作用<strong>不显著</strong> ($\text{Estimate} &#x3D; -0.0038, p&#x3D;0.698$)。</p>
-<p><strong>结论</strong>：$\text{M14}$ 模型排除了统计功效不足的解释，支持了CF保护机制在行为抑制性达到极端高风险水平时，其功能会停止发挥的理论假设。或许可以解释为 CF 的自发调节作用效应有限，在高 BI 组中更需要进行更早更有效的干预。</p>
-<h3 id="研究过程"><a href="#研究过程" class="headerlink" title="研究过程"></a>研究过程</h3><p>整个分析流程是：**从全样本的宏观验证（ - ）到高风险亚组的分组建模（$\text{M9}$），最终通过内部验证（$\text{M14}$）排除统计假象。</p>
-<h4 id="一、-连续变量调节模型（-text-Model-1-text-Model-5-）"><a href="#一、-连续变量调节模型（-text-Model-1-text-Model-5-）" class="headerlink" title="一、 连续变量调节模型（$\text{Model 1}$ - $\text{Model 5}$）"></a>一、 连续变量调节模型（$\text{Model 1}$ - $\text{Model 5}$）</h4><ul>
-<li><strong>目的</strong>：在全样本中，检验 $\text{CF}$ 的效应是否被<strong>连续的 $\text{BI}$ 分数</strong> ($\text{BI_z}$) 调节。同时，通过逐步增加控制变量，考察核心效应的稳健性。</li>
-<li><strong>数据</strong>：多重插补后的 $\text{mids}$ 对象，所有变量均使用标准化分数或中心化分数。</li>
-<li><strong>方法</strong>：<strong>$\text{MICE}$ 后回归</strong>，采用 $\text{with()}$ 和 $\text{pool()}$ 函数。</li>
+<p><strong>研究流程</strong>：<br>从全样本的连续变量调节模型 (M1-M5) 开始，发现 CF ✖️ BI 交互项虽方向一致但效应微弱且不显著。随后转向基于 BI 聚类分组 (M9) 的简单斜率分析，发现 CF 的保护作用仅在<strong>中度BI组</strong>中边缘显著 (Estimate &#x3D; -0.0220, p&#x3D;0.0543)，但在<strong>高 BI 组</strong>中效应完全消失 (Estimate ≈ 0.0014)。</p>
+<p><strong>探究效应消失原因</strong>：<br>进一步构建了针对<strong>高 BI 亚组</strong>的内部验证模型 (M14)。结果显示，在该子样本中，连续 BI 分数与 CF 的交互作用<strong>不显著</strong> (Estimate &#x3D; -0.0038, p&#x3D;0.698)。</p>
+<p><strong>结论</strong>：M14 模型排除了统计功效不足的解释，支持了CF保护机制在行为抑制性达到极端高风险水平时，其功能会停止发挥的理论假设。或许可以解释为 CF 的自发调节作用效应有限，在高 BI 组中更需要进行更早更有效的干预。</p>
+<h3 id="研究过程"><a href="#研究过程" class="headerlink" title="研究过程"></a>研究过程</h3><h4 id="一、-连续变量调节模型（Model-1-Model-5）"><a href="#一、-连续变量调节模型（Model-1-Model-5）" class="headerlink" title="一、 连续变量调节模型（Model 1 - Model 5）"></a>一、 连续变量调节模型（Model 1 - Model 5）</h4><ul>
+<li><strong>目的</strong>：在全样本中，检验 CF 的效应是否被<strong>连续的 BI 分数</strong> (BI_z) 调节。同时，通过逐步增加控制变量，考察核心效应的稳健性。</li>
+<li><strong>数据</strong>：多重插补后的 mids 对象，所有变量均使用标准化分数或中心化分数。</li>
+<li><strong>方法</strong>：<strong>MICE 后回归</strong>，采用 with() 和 pool() 函数。</li>
 <li><strong>工作内容</strong>：<ul>
-<li><strong>$\text{M1}$</strong>：基础模型，检验 $\text{age} + \text{sex} + \text{BI_z} \times \text{CF_z}$。</li>
-<li><strong>$\text{M2}$</strong>：加入家庭情绪环境控制变量（$\text{income, SES_subj, edu_parent, dep_parent2}$）。</li>
-<li><strong>$\text{M3}$</strong>：加入儿童人格&#x2F;气质控制变量（$\text{SPS, extroversion, effort_control, negative_affect, novelty_hesitation}$）。</li>
-<li><strong>$\text{M4}$</strong>：加入儿童执行功能控制变量（$\text{wm_q, inhib_q, ef_total_q, effort_q}$）。</li>
-<li><strong>$\text{M5}$</strong>：加入情绪调节与外化问题控制变量。</li>
+<li><strong>M1</strong>：基础模型，检验 age + sex + BI_z ✖️ CF_z。</li>
+<li><strong>M2</strong>：加入家庭情绪环境控制变量（income, SES_subj, edu_parent, dep_parent2）。</li>
+<li><strong>M3</strong>：加入儿童人格&#x2F;气质控制变量（SPS, extroversion, effort_control, negative_affect, novelty_hesitation）。</li>
+<li><strong>M4</strong>：加入儿童执行功能控制变量（wm_q, inhib_q, ef_total_q, effort_q）。</li>
+<li><strong>M5</strong>：加入情绪调节与外化问题控制变量。</li>
 </ul>
 </li>
 </ul>
@@ -266,174 +264,174 @@
 <th>核心交互项: BI_z×CF_z</th>
 <th>p 值范围</th>
 <th>协变量（Controls）</th>
-<th>控制变量分类</th>
+<th>协变量分类</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>$\text{M1}$</td>
+<td>M1</td>
 <td>系数负向，但不显著</td>
-<td>$\text{p} \gg 0.05$</td>
-<td>$\text{age} + \text{sex}$</td>
+<td>p &gt; 0.05</td>
+<td>age + sex</td>
 <td>基础人口学控制</td>
 </tr>
 <tr>
-<td>$\text{M2}$</td>
+<td>M2</td>
 <td>系数负向，但不显著</td>
-<td>$\text{p} \gg 0.05$</td>
-<td>$\text{M1} + \text{Family Environ.}$（$\text{income, SES_subj, edu_parent, dep_parent2}$）</td>
+<td>p &gt; 0.05</td>
+<td>M1 + Family Environ（income, SES_subj, edu_parent, dep_parent2）</td>
 <td>家庭环境控制</td>
 </tr>
 <tr>
-<td>$\text{M3}$</td>
+<td>M3</td>
 <td>系数负向，但不显著</td>
-<td>$\text{p} \gg 0.05$</td>
-<td>$\text{M2} + \text{Personality}$（$\text{SPS, extroversion, effort_control, negative_affect, novelty_hesitation}$）</td>
+<td>p &gt; 0.05</td>
+<td>M2 + Personality (SPS, extroversion, effort_control, negative_affect, novelty_hesitation）</td>
 <td>人格&#x2F;气质控制</td>
 </tr>
 <tr>
-<td>$\text{M4}$</td>
+<td>M4</td>
 <td>系数负向，但不显著</td>
-<td>$\text{p} \gg 0.05$</td>
-<td>$\text{M3} + \text{Executive Function}$（$\text{wm_q, inhib_q, ef_total_q, effort_q}$）</td>
+<td>p &gt; 0.05</td>
+<td>M3 + t{Executive Function（wm_q, inhib_q, ef_total_q, effort_q）</td>
 <td>执行功能控制</td>
 </tr>
 <tr>
-<td>$\text{M5}$</td>
+<td>M5</td>
 <td>系数负向，但不显著</td>
-<td>$\text{p} \gg 0.05$</td>
-<td>$\text{M4} + \text{Emotion&#x2F;Externalizing}$（$\text{emotion_reg2, quest_extra, emo_recog, emo_label, EX_aggression, EX_rulebreak, EX_total}$）</td>
+<td>p &gt; 0.05</td>
+<td>M4 + Emotion&#x2F;Externalizing（emotion_reg2, quest_extra, emo_recog, emo_label, EX_aggression, EX_rulebreak, EX_total）</td>
 <td>情绪与外化问题控制</td>
 </tr>
 </tbody></table>
 <ul>
-<li><strong>结果</strong>：交互项 $\text{BI_z} \times \text{CF_z}$ 方向为负（支持 $\text{CF}$ 保护作用），但在所有模型中均<strong>不显著</strong>。</li>
+<li><strong>结果</strong>：交互项 BI_z ✖️ CF_z 方向为负（支持 CF 保护作用），但在所有模型中均<strong>不显著</strong>。</li>
 </ul>
-<h4 id="二、-聚类调节模型（-text-Model-M9-）"><a href="#二、-聚类调节模型（-text-Model-M9-）" class="headerlink" title="二、 聚类调节模型（$\text{Model M9}$）"></a>二、 聚类调节模型（$\text{Model M9}$）</h4><ul>
-<li><strong>目的</strong>：解决 $\text{M1}$-$\text{M5}$ 结果不显著的问题，转而检验 $\text{CF}$ 的效应是否仅在特定的 $\text{BI}$ 风险亚组中显著（简单斜率检验）。</li>
-<li><strong>数据</strong>：在 $\text{MICE}$ 数据集中加入了 $\text{BI}$ 的高斯混合模型聚类结果（$\text{BI_cluster}$，分为高、中、低三组）。</li>
+<h4 id="二、-聚类调节模型（Model-M9）"><a href="#二、-聚类调节模型（Model-M9）" class="headerlink" title="二、 聚类调节模型（Model M9）"></a>二、 聚类调节模型（Model M9）</h4><ul>
+<li><strong>目的</strong>：解决 M1-M5 结果不显著的问题，转而检验 CF 的效应是否仅在特定的 BI 风险亚组中显著（简单斜率检验）。</li>
+<li><strong>数据</strong>：在 MICE 数据集中加入了 BI 的高斯混合模型聚类结果（BI_cluster，分为高、中、低三组）。</li>
 <li><strong>方法</strong>：<em>Pool-by-Lapply</em> 方法进行拟合。</li>
 <li><strong>工作内容</strong>：<ul>
-<li><strong>$\text{M9}$</strong>：核心调节模型，检验 $\text{IN_log} \sim \text{Controls} + \text{BI_cluster} \times \text{CF_centered}$。以<strong>中度 $\text{BI}$ 组</strong> ($\text{Cluster 1}$) 为参照组。</li>
+<li><strong>M9</strong>：核心调节模型，检验 IN_log sim Controls + BI_cluster ✖️ CF_centered。以<strong>中度 BI 组</strong> (Cluster 1) 为参照组。</li>
 </ul>
 </li>
 <li><strong>结果</strong>：<ul>
-<li><strong>中度 $\text{BI}$ 组</strong>：$\text{CF}$ 的简单斜率<strong>边缘显著</strong>（$\text{Estimate} &#x3D; -0.0220, p&#x3D;0.0543$）。</li>
-<li><strong>高 $\text{BI}$ 组</strong>：$\text{CF}$ 的简单斜率<strong>趋近于零</strong>（$\text{Estimate} \approx 0.0014$）。        </li>
-<li><strong>结论</strong>：$\text{CF}$ 的保护作用是情境依赖的，在高 $\text{BI}$ 组中效应缺失。</li>
+<li><strong>中度 BI 组</strong>：CF 的简单斜率<strong>边缘显著</strong>（Estimate &#x3D; -0.0220, p&#x3D;0.0543）。</li>
+<li><strong>高 BI 组</strong>：CF 的简单斜率<strong>趋近于零</strong>（Estimate ≈ 0.0014）。</li>
 </ul>
 </li>
+<li><strong>结论</strong>：CF 的保护作用是情境依赖的，在高 BI 组中效应缺失。</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th>核心参数 (M9 模型)</th>
 <th>估计值 (Estimate)</th>
-<th>标准误</th>
-<th>t 值</th>
+<th>标准误 (Std.Error)</th>
+<th>t 值 (statistic)</th>
 <th>p 值</th>
 <th>结论</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>截距 ($\text{Intercept}$)</td>
-<td>$5.1659$</td>
-<td>$0.0105$</td>
-<td>$493.59$</td>
-<td>$&lt; 0.001$</td>
-<td>$\text{Cluster 1}$ 的预测均值（所有协变量为 $0$）</td>
+<td>截距 (Intercept)</td>
+<td>5.1659</td>
+<td>0.0105</td>
+<td>493.59</td>
+<td>&lt;0.001</td>
+<td>Cluster 1 的预测均值（所有协变量为 0）</td>
 </tr>
 <tr>
-<td><strong>$\text{CF_centered}$</strong> ($\text{Cluster 1}$ 斜率)</td>
-<td><strong>$-0.0220$</strong></td>
-<td>$0.0112$</td>
-<td>$-1.93$</td>
-<td><strong>$0.0543$</strong></td>
-<td><strong>边缘显著的 $\text{CF}$ 保护作用</strong></td>
+<td>CF_centered (Cluster 1 斜率)</td>
+<td>-0.022</td>
+<td>0.0112</td>
+<td>-1.93</td>
+<td>0.0543</td>
+<td>边缘显著的 CF 保护作用</td>
 </tr>
 <tr>
-<td>$\text{BI_cluster 2}$ 主效应</td>
-<td>$0.0412$</td>
-<td>$0.0135$</td>
-<td>$3.04$</td>
-<td>$0.0025$</td>
-<td>$\text{Cluster 2}$ 的 $\text{IN_log}$ 预测均值显著高于 $\text{Cluster 1}$</td>
+<td>BI_cluster 2 主效应</td>
+<td>0.0412</td>
+<td>0.0135</td>
+<td>3.04</td>
+<td>0.0025</td>
+<td>Cluster 2 的 IN_log 预测均值显著高于 Cluster 1</td>
 </tr>
 <tr>
-<td>$\text{BI_cluster 3}$ 主效应</td>
-<td>$-0.0066$</td>
-<td>$0.0221$</td>
-<td>$-0.30$</td>
-<td>$0.7645$</td>
-<td>$\text{Cluster 3}$ 的 $\text{IN_log}$ 预测均值与 $\text{Cluster 1}$ 无显著差异</td>
+<td>BI_cluster 3 主效应</td>
+<td>-0.0066</td>
+<td>0.0221</td>
+<td>-0.3</td>
+<td>0.7645</td>
+<td>Cluster 3 的 IN_log 预测均值与 Cluster 1 无显著差异</td>
 </tr>
 <tr>
-<td><strong>$\text{BI_cluster 2:CF_centered}$</strong></td>
-<td><strong>$0.0234$</strong></td>
-<td>$0.0125$</td>
-<td>$1.87$</td>
-<td><strong>$0.0617$</strong></td>
-<td>$\text{Cluster 2}$ 与 $\text{Cluster 1}$ 的 $\text{CF}$ 斜率<strong>差异边缘显著</strong></td>
+<td>BI_cluster 2:CF_centered</td>
+<td>0.0234</td>
+<td>0.0125</td>
+<td>1.87</td>
+<td>0.0617</td>
+<td>Cluster 2 与 Cluster 1 的 CF 斜率差异边缘显著</td>
 </tr>
 <tr>
-<td>$\text{BI_cluster 3:CF_centered}$</td>
-<td>$0.0285$</td>
-<td>$0.0202$</td>
-<td>$1.41$</td>
-<td>$0.1583$</td>
-<td>$\text{Cluster 3}$ 与 $\text{Cluster 1}$ 的 $\text{CF}$ 斜率差异不显著</td>
+<td>BI_cluster 3:CF_centered</td>
+<td>0.0285</td>
+<td>0.0202</td>
+<td>1.41</td>
+<td>0.1583</td>
+<td>Cluster 3 与 Cluster 1 的 CF 斜率差异不显著</td>
 </tr>
 </tbody></table>
-<h4 id="三、-内部验证模型（-text-Model-M14-）"><a href="#三、-内部验证模型（-text-Model-M14-）" class="headerlink" title="三、 内部验证模型（$\text{Model M14}$）"></a>三、 内部验证模型（$\text{Model M14}$）</h4><ul>
-<li><strong>目的</strong>：解决 $\text{M9}$ 结果引发的“高 BI 效应缺失是由于 $\text{BI}$ 原始数据信息损失导致的<strong>统计功效不足</strong>（方差过小），还是$\text{CF}$ 机制效应本身过小”这一关键争议。</li>
-<li><strong>数据</strong>：仅使用 <strong>$\text{高 BI}$ 组 ($\text{Cluster 2}$) 的子样本</strong>，并使用连续的 $\text{BI}$ 分数 ($\text{BI_score_new_rev}$) 进行调节分析。</li>
-<li><strong>方法</strong>：<strong>$\text{Pool-by-Lapply}$</strong> 方法进行拟合。</li>
+<h4 id="三、-内部验证模型（Model-M14）"><a href="#三、-内部验证模型（Model-M14）" class="headerlink" title="三、 内部验证模型（Model M14）"></a>三、 内部验证模型（Model M14）</h4><ul>
+<li><strong>目的</strong>：解决 M9 结果引发的“高 BI 效应缺失是由于 BI 原始数据信息损失导致的<strong>统计功效不足</strong>（方差过小），还是CF 机制效应本身过小”这一关键争议。</li>
+<li><strong>数据</strong>：仅使用 <strong>高 BI 组 (Cluster 2) 的子样本</strong>，并使用连续的 BI 分数 (BI_score_new_rev) 进行调节分析。</li>
+<li><strong>方法</strong>：<em>Pool-by-Lapply</em> 方法进行拟合。</li>
 <li><strong>工作内容</strong>：<ul>
-<li><strong>$\text{M14}$</strong>：子样本内部调节模型，检验 $\text{IN_log} \sim \text{Controls} + \text{CF_centered} \times \text{BI_score_new_rev}$。</li>
+<li><strong>M14</strong>：子样本内部调节模型，检验 IN_log sim Controls + CF_centered ✖️ BI_score_new_rev</li>
 </ul>
 </li>
 <li><strong>结果</strong>：<ul>
-<li>交互项 $\text{CF_centered}:\text{BI_score_new_rev}$：$\text{Estimate} &#x3D; -0.0038, p &#x3D; 0.698$。<strong>（不显著）</strong>        </li>
-<li><strong>结论</strong>：由于 $\text{CF}$ 效应在高 $\text{BI}$ 组内部<strong>不被连续 $\text{BI}$ 差异调节</strong>，彻底排除了“统计功效不足”的解释。</li>
+<li>交互项 CF_centered:BI_score_new_rev：Estimate &#x3D; -0.0038, p &#x3D; 0.698。<strong>（不显著）</strong></li>
 </ul>
 </li>
+<li><strong>结论</strong>：由于 CF 效应在高 BI 组内部<strong>不被连续 BI 差异调节</strong>，彻底排除了“统计功效不足”的解释。</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th>核心参数 (M14 模型)</th>
-<th>估计值</th>
-<th>标准误</th>
-<th>t 值</th>
+<th>估计值 (Estimate)</th>
+<th>标准误 (Std.Error)</th>
+<th>t 值 (statistic)</th>
 <th>p 值</th>
 <th>结论</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>$\text{CF_centered}$</strong> (主效应)</td>
-<td>$0.0018$</td>
-<td>$0.0082$</td>
-<td>$0.220$</td>
-<td>$0.826$</td>
-<td>$\text{CF}$ 在高 $\text{BI}$ 组的<strong>效应本身为零</strong></td>
+<td>CF_centered (主效应)</td>
+<td>0.0018</td>
+<td>0.0082</td>
+<td>0.22</td>
+<td>0.826</td>
+<td>CF 在高 BI 组的效应本身为零</td>
 </tr>
 <tr>
-<td><strong>$\text{BI_score_new_rev}$</strong> (主效应)</td>
-<td>$0.0013$</td>
-<td>$0.0368$</td>
-<td>$0.036$</td>
-<td>$0.972$</td>
-<td>连续 $\text{BI}$ 分数在高 $\text{BI}$ 组中无主效应</td>
+<td>BI_score_new_rev (主效应)</td>
+<td>0.0013</td>
+<td>0.0368</td>
+<td>0.036</td>
+<td>0.972</td>
+<td>连续 BI 分数在高 BI 组中无主效应</td>
 </tr>
 <tr>
-<td><strong>$\text{CF_centered}:\text{BI_score_new_rev}$</strong></td>
-<td><strong>$-0.0038$</strong></td>
-<td>$0.0096$</td>
-<td>$-0.400$</td>
-<td><strong>$0.698$</strong></td>
-<td><strong>不存在显著的调节效应</strong></td>
+<td>CF_centered:BI_score_new_rev</td>
+<td>-0.0038</td>
+<td>0.0096</td>
+<td>-0.4</td>
+<td>0.698</td>
+<td>不存在显著的调节效应</td>
 </tr>
 </tbody></table>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>假设：认知灵活性 (CF) 的保护性效应受到行为抑制性 (BI) 水平的调节。<br>结论：支持。调节效应存在，但形式是非线性的。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>结论：调节效应存在，但形式是非线性的。</p>
 
     </div>
 
@@ -469,9 +467,6 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/11/17/%E4%BD%BF%E7%94%A8%20Hexo%20+%20NexT%20+%20GitHub%20Pages%20%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="使用 Hexo + NexT + GitHub Pages 建立个人博客">
-                  使用 Hexo + NexT + GitHub Pages 建立个人博客 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
