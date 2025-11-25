@@ -26,45 +26,6 @@
   --highlight-gutter-foreground: #555;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-bg-color: #282828;
-    --content-bg-color: #333;
-    --card-bg-color: #555;
-    --text-color: #ccc;
-    --selection-bg: #bbb;
-    --selection-color: #333;
-    --blockquote-color: #bbb;
-    --link-color: #ccc;
-    --link-hover-color: #eee;
-    --brand-color: #ddd;
-    --brand-hover-color: #ddd;
-    --table-row-odd-bg-color: #282828;
-    --table-row-hover-bg-color: #363636;
-    --menu-item-bg-color: #555;
-    --theme-color: #222;
-    --btn-default-bg: #222;
-    --btn-default-color: #ccc;
-    --btn-default-border-color: #555;
-    --btn-default-hover-bg: #666;
-    --btn-default-hover-color: #ccc;
-    --btn-default-hover-border-color: #666;
-    --highlight-background: #272822;
-    --highlight-foreground: #ddd;
-    --highlight-gutter-background: #393a34;
-    --highlight-gutter-foreground: #cacaca;
-    color-scheme: dark;
-  }
-  img {
-    opacity: 0.75;
-  }
-  img:hover {
-    opacity: 0.9;
-  }
-  iframe {
-    color-scheme: light;
-  }
-}
 @supports (color: light-dark(#f00, #f00)) {
   :root {
     --body-bg-color: light-dark(#eee, #282828);
@@ -554,78 +515,6 @@ code.hljs {
 .hljs-strong {
   font-weight: bold
 }
-@media (prefers-color-scheme: dark) {
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em
-}
-code.hljs {
-  padding: 3px 5px
-}
-/*
-Monokai style - ported by Luigi Maselli - http://grigio.org
-*/
-.hljs {
-  background: #272822;
-  color: #ddd
-}
-.hljs-tag,
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-strong,
-.hljs-number,
-.hljs-name {
-  color: #f92672
-}
-.hljs-code {
-  color: #66d9ef
-}
-.hljs-attribute,
-.hljs-attr,
-.hljs-symbol,
-.hljs-regexp,
-.hljs-link {
-  color: #bf79db
-}
-.hljs-string,
-.hljs-bullet,
-.hljs-subst,
-.hljs-title,
-.hljs-section,
-.hljs-emphasis,
-.hljs-type,
-.hljs-built_in,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
-.hljs-template-tag,
-.hljs-template-variable {
-  color: #a6e22e
-}
-.hljs-title.class_,
-.hljs-class .hljs-title {
-  color: white
-}
-.hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: #75715e
-}
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-doctag,
-.hljs-title,
-.hljs-section,
-.hljs-type,
-.hljs-selector-id {
-  font-weight: bold
-}
-}
 code,
 kbd,
 figure.highlight,
@@ -678,11 +567,6 @@ figure.highlight {
   overflow: auto;
   position: relative;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  figure.highlight {
-    color-scheme: dark;
-  }
 }
 figure.highlight pre {
   border: 0;
@@ -1371,7 +1255,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #74225b;
+    background: #dbf2d0;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2227,24 +2111,6 @@ pre code {
 .post-block:last-of-type .post-eof {
   display: none;
 }
-.post-copyright ul {
-  list-style: none;
-  overflow: hidden;
-  padding: 0.5em 1em;
-  position: relative;
-  background: var(--card-bg-color);
-  border-left: 3px solid #ff2a2a;
-  margin: 1em 0 0;
-}
-.post-copyright ul::after {
-  content: '\f25e';
-  font-family: 'Font Awesome 7 Brands';
-  font-size: 200px;
-  opacity: 0.1;
-  position: absolute;
-  right: -50px;
-  top: -150px;
-}
 .post-tags {
   margin-top: 40px;
   text-align: center;
@@ -2500,52 +2366,6 @@ ul.breadcrumb li:last-child {
 .tag-cloud-10 {
   border-bottom-color: #111;
   color: #111;
-}
-@media (prefers-color-scheme: dark) {
-  .tag-cloud-0 {
-    border-bottom-color: #555;
-    color: #555;
-  }
-  .tag-cloud-1 {
-    border-bottom-color: #646464;
-    color: #646464;
-  }
-  .tag-cloud-2 {
-    border-bottom-color: #737373;
-    color: #737373;
-  }
-  .tag-cloud-3 {
-    border-bottom-color: #828282;
-    color: #828282;
-  }
-  .tag-cloud-4 {
-    border-bottom-color: #929292;
-    color: #929292;
-  }
-  .tag-cloud-5 {
-    border-bottom-color: #a1a1a1;
-    color: #a1a1a1;
-  }
-  .tag-cloud-6 {
-    border-bottom-color: #b0b0b0;
-    color: #b0b0b0;
-  }
-  .tag-cloud-7 {
-    border-bottom-color: #c0c0c0;
-    color: #c0c0c0;
-  }
-  .tag-cloud-8 {
-    border-bottom-color: #cfcfcf;
-    color: #cfcfcf;
-  }
-  .tag-cloud-9 {
-    border-bottom-color: #dedede;
-    color: #dedede;
-  }
-  .tag-cloud-10 {
-    border-bottom-color: #eee;
-    color: #eee;
-  }
 }
 @supports (color: light-dark(#f00, #f00)) {
   .tag-cloud-0 {
